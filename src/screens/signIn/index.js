@@ -18,9 +18,9 @@ export function SignIn(){
                 style={styles.image}/>
             <View style={styles.content}>
                 <Text style={styles.title}>
-                    Organize {`\n`}
-                    suas jogatinas  {`\n`}
-                    facilmente {`\n`}
+                    Conect-se {`\n`}
+                    e organize suas {`\n`}
+                    jogatinas  {`\n`}
                 </Text>
                 <Text style={styles.subtitle}>
                     Crie gurpos para jogar seus games{`\n`}
