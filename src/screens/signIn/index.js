@@ -20,7 +20,7 @@ export function SignIn(){
                 <Text style={styles.title}>
                     Conect-se {`\n`}
                     e organize suas {`\n`}
-                    jogatinas  {`\n`}
+                    jogatinas
                 </Text>
                 <Text style={styles.subtitle}>
                     Crie gurpos para jogar seus games{`\n`}
