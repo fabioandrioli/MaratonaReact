@@ -7,6 +7,7 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 
 export default function App() {
+  //retorna um boleando dizendo se carregou ou não as fontes
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
@@ -17,7 +18,7 @@ export default function App() {
   if(!fontsLoaded){
     return <AppLoading/>
   }
-  
+
   return (
     <>
         <StatusBar
