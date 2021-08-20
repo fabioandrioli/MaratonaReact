@@ -16,7 +16,6 @@ export function AuthRoutes() {
         <Stack.Navigator
             headerMode="none"
             screenOptions={ModalOptions}
-            
         >
             <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="Home" component={Home} />

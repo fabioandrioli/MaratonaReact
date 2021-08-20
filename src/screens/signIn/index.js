@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 import {View,Text,Image} from 'react-native'
 import {styles} from './styles'
 
@@ -9,6 +10,12 @@ import IlustrationImg from '../../assets/illustration.png'
 import {ButtonIcon} from '../../components/ButtonIcon/index'
 
 export function SignIn(){
+    const navigation = useNavigation();
+
+    function handleNavigationSiginIn() {
+        navigation.navigate('Home')
+    }
+
     return(
         <View style={styles.container}>
           
@@ -26,7 +33,7 @@ export function SignIn(){
                     Crie gurpos para jogar seus games{`\n`}
                     favoritos com seus amigos
                 </Text>
-                <ButtonIcon title="Entre com o Discord"/>
+                <ButtonIcon title="Entre com o Discord" onPress={handleNavigationSiginIn}/>
             </View>
         </View>
         
