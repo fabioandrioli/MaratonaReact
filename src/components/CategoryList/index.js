@@ -2,11 +2,9 @@ import React from 'react';
 import {ScrollView} from 'react-native';
 import { styles } from './styles';
 
-
-
 import { categoriesItems } from '../../utils/categoriesItems';
 import {Category} from '../Category'
-export function CategoryList({categorySelected}){
+export function CategoryList({categorySelected = false}){
   return(
     <ScrollView
       horizontal

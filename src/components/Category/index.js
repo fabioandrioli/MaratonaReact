@@ -8,7 +8,7 @@ import { theme } from '../../global/styles/theme';
 
 export function Category({
     title,
-    icon,
+    icon=false,
     checked = false,
 }){
     const { secondary50, secondary70 } = theme.colors;
