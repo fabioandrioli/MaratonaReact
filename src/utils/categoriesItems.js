@@ -3,7 +3,7 @@ import imageRankedSvg from '../assets/ranked.svg'
 import imageDuelSvg from '../assets/duel.svg'
 import imageFunSvg from '../assets/fun.svg'
 import imageTrainingSvg from '../assets/training.svg'
-export const categoires = [
+export const categoriesItems = [
     {
         id:'1',
         title:"Ranqueada",
