@@ -1,12 +1,10 @@
 import {RectButton} from 'react-native-gesture-handler';
 import React from 'react';
 import { MaterialCommunityIcons} from '@expo/vector-icons'
-
-
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 
-export function ButtonAdd({title,...rest}){
+export function ButtonAdd({...rest}){
   return(
     <RectButton
       style={styles.container} 

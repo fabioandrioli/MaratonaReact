@@ -3,10 +3,8 @@ import {StatusBar} from 'react-native'
 import { Inter_400Regular, Inter_500Medium} from '@expo-google-fonts/inter';
 import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
 import {Routes} from './src/routes/index';
-import { SignIn } from './src/screens/signin';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
-import {Background} from './src/components/Background'
 
 
 export default function App() {

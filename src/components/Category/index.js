@@ -1,18 +1,16 @@
 import React from 'react';
-import {View} from 'react-native';
-
-
-
+import {ScrollView} from 'react-native';
 import { styles } from './styles';
-import { theme } from '../../global/styles/theme';
 
 export function Category(){
   return(
-    <View
-      style={styles.container} 
-  
+    <ScrollView
+      horizontal
+      style={styles.container}
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={{padding:40}}
     >
-       
-    </View>
+      
+    </ScrollView>
   );
 }

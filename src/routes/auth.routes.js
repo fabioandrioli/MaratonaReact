@@ -1,8 +1,8 @@
 import  React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
-import {Home} from '../screens/home'
-import {SignIn} from '../screens/signin'
+import {Home} from '../screens/Home/index'
+import {SignIn} from '../screens/signIn/index'
 
 const Stack = createStackNavigator();
 const ModalOptions = {
