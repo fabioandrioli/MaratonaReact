@@ -17,7 +17,7 @@ export function CategoryList({categorySelected = false}){
            <Category
             key={category.id}
             title={category.title}
-            icon={category.icon}
+            Icon={category.icon}
             
           /> 
         ))

@@ -4,9 +4,6 @@ import {View, Text} from 'react-native'
 import {styles} from './styles'
 import { LinearGradient } from 'expo-linear-gradient';
 import { theme } from '../../global/styles/theme';
-import { SvgProps } from 'react-native-svg';
-
-import imageDuelSvg from '../../assets/duel.svg'
 
 export function Category({
     title = "Test",
@@ -23,7 +20,7 @@ export function Category({
     
                <View style={[styles.content,{opacity: checked ? 1 : 0.4 }]}>
                     <View style={checked ? styles.checked : styles.check}>
-                    <imageDuelSvg width={48} height={48}/>
+                    <Icon width={48} height={48}/>
                     </View>
                     <Text style={styles.title}>
                         {title}
