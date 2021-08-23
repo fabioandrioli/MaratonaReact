@@ -4,13 +4,13 @@ import { styles } from './styles';
 
 import { categoriesItems } from '../../utils/categoriesItems';
 import {Category} from '../Category'
-export function CategoryList({categorySelected = false}){
+export function CategoryList({categorySelected = false, setCategory}){
   return(
     <ScrollView
       horizontal
       style={styles.container}
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{padding:40}}
+      contentContainerStyle={{paddingRight:40}}
     >
       {
         categoriesItems.map(category => (
@@ -18,7 +18,8 @@ export function CategoryList({categorySelected = false}){
             key={category.id}
             title={category.title}
             Icon={category.icon}
-            
+            checked={category.id === categorySelected}
+            onPress={() => setCategory(category.id)}
           /> 
         ))
       }

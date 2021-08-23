@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {View} from 'react-native'
 import {styles} from './styles'
 
@@ -9,13 +9,22 @@ import {CategoryList} from '../../components/CategoryList'
 
 
 export function Home(){
+    const [category,setCategory] = useState('');
+
+    function handleCategorySelected(categoryId){
+        categoryId === category ? setCategory('') : setCategory(categoryId)
+    }
+
     return(
         <View>
             <View  style={styles.header}>
                 <Profile/>
                 <ButtonAdd/>
             </View>
-            <CategoryList/>
+            <CategoryList 
+                categorySelected={category}
+                setCategory={handleCategorySelected}
+            />
         </View>
         
     )
