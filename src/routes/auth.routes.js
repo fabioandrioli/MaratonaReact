@@ -1,8 +1,8 @@
 import  React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
-import {Home} from '../screens/Home/index'
-import {SignIn} from '../screens/signIn/index'
+import {Home} from '../screens/home/index'
+import {SignIn} from '../screens/signin/index'
 
 const Stack = createStackNavigator();
 const ModalOptions = {
@@ -17,8 +17,9 @@ export function AuthRoutes() {
             headerMode="none"
             screenOptions={ModalOptions}
         >
-            <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="SignIn" component={SignIn} />
+            
         </Stack.Navigator>
     );
   }

@@ -13,14 +13,14 @@ export function CategoryList({categorySelected = false}){
       contentContainerStyle={{padding:40}}
     >
       {
-        categoriesItems.map(category => {
-          <Category
+        categoriesItems.map(category => (
+           <Category
             key={category.id}
             title={category.title}
             icon={category.icon}
-            checked={category.id === categorySelected}
+            
           /> 
-        })
+        ))
       }
     </ScrollView>
   );
