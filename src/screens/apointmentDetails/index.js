@@ -12,7 +12,7 @@ import {styles} from './styles'
 import { theme } from '../../global/styles/theme';
 
 //images imports
-import {ImageBannerPng} from "../../assets/banner.png"
+import ImageBannerPng from "../../assets/banner.png"
 
 export function ApointmentDetails(){
     return(
@@ -29,7 +29,7 @@ export function ApointmentDetails(){
                     </BorderlessButton>
                 }
             />
-            <ImageBackground 
+            <ImageBackground
                 source={ImageBannerPng}
                 style={styles.banner}
             >
