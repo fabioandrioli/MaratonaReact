@@ -4,7 +4,7 @@ import { styles } from './styles';
 
 import { categoriesItems } from '../../utils/categoriesItems';
 import {Category} from '../Category'
-export function CategoryList({categorySelected = false, setCategory}){
+export function CategoryList({categorySelected = false, setCategory, hasCheckBox = false}){
   return(
     <ScrollView
       horizontal
@@ -20,6 +20,7 @@ export function CategoryList({categorySelected = false, setCategory}){
             Icon={category.icon}
             checked={category.id === categorySelected}
             onPress={() => setCategory(category.id)}
+            hasCheckBox={hasCheckBox}
           /> 
         ))
       }
