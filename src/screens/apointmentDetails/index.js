@@ -1,10 +1,11 @@
 import React from "react";
-import { View,Text,ImageBackground } from 'react-native';
+import { View,Text,ImageBackground, FlatList } from 'react-native';
 import {BorderlessButton} from 'react-native-gesture-handler';
 import {Fontisto} from '@expo/vector-icons';
 
 //components imports
 import {Background} from '../../components/Background'
+import {ListHeader} from '../../components/ListHeader'
 import {Header} from '../../components/Header'
 
 //styles imports
@@ -15,6 +16,15 @@ import { theme } from '../../global/styles/theme';
 import ImageBannerPng from "../../assets/banner.png"
 
 export function ApointmentDetails(){
+    const members = [
+        {
+            id:1,
+            username:"Fábio",
+            avatar_url:"https://github.com/fabioandrioli.png",
+            status:"online",
+        
+        },
+    ]
     return(
         <Background>
             <Header 
@@ -33,8 +43,24 @@ export function ApointmentDetails(){
                 source={ImageBannerPng}
                 style={styles.banner}
             >
-
+                <View style={styles.bannerContent}>
+                    <Text  style={styles.title}>
+                        Lendário
+                    </Text>
+                    <Text style={styles.subtitle}>
+                        É hoje que vamos chegar ao chellenger sem perder uma partida da M10
+                    </Text>
+                </View>
             </ImageBackground>
+
+            <ListHeader
+                title="Jogadores"
+                subtitle="Total 3"
+            />
+
+            <FlatList
+
+            />
             
         </Background>
     )
