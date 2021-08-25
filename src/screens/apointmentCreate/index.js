@@ -10,7 +10,7 @@ import {Header} from '../../components/Header'
 import {Member} from '../../components/Member'
 import {ListDivider} from '../../components/ListDivider'
 import {ButtonIcon} from '../../components/ButtonIcon'
-import { ApointmentCreate } from "../apointmentCreate";
+
 //styles imports
 import {styles} from './styles'
 import { theme } from '../../global/styles/theme';
@@ -18,7 +18,7 @@ import { theme } from '../../global/styles/theme';
 //images imports
 import ImageBannerPng from "../../assets/banner.png"
 
-export function ApointmentDetails(){
+export function ApointmentCreate(){
     const members = [
         {
             id:"1",
