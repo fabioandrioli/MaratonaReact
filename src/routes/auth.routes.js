@@ -1,9 +1,10 @@
 import  React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
-import {Home} from '../screens/home/index'
-import {SignIn} from '../screens/signin/index'
-import {ApointmentDetails} from '../screens/apointmentDetails/index'
+import {Home} from '../screens/home/index';
+import {SignIn} from '../screens/signin/index';
+import {ApointmentDetails} from '../screens/apointmentDetails/index';
+import {ApointmentCreate} from '../screens/apointmentCreate/index';
 import {theme} from '../global/styles/theme';
 
 const Stack = createStackNavigator();
@@ -19,7 +20,7 @@ export function AuthRoutes() {
             headerMode="none"
             screenOptions={ModalOptions}
         >
-          
+            <Stack.Screen name="ApointmentCreate" component={ApointmentCreate} />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="ApointmentDetails" component={ApointmentDetails} />
             <Stack.Screen name="SignIn" component={SignIn} />

@@ -1,85 +1,70 @@
-import React from "react";
-import { View,Text,ImageBackground, FlatList } from 'react-native';
-import {BorderlessButton} from 'react-native-gesture-handler';
-import {Fontisto} from '@expo/vector-icons';
+import React, {useState} from "react";
+import { 
+    Text,
+    View,
+    Platform,
+    ScrollView,
+    KeyboardAvoidingView,
+} from 'react-native';
+import {RectButton} from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+import { Feather } from '@expo/vector-icons';
 
 //components imports
-import {Background} from '../../components/Background'
-import {ListHeader} from '../../components/ListHeader'
-import {Header} from '../../components/Header'
-import {Member} from '../../components/Member'
-import {ListDivider} from '../../components/ListDivider'
-import {ButtonIcon} from '../../components/ButtonIcon'
+import {Background} from '../../components/Background';
+import {Header} from '../../components/Header';
+import {CategoryList} from '../../components/CategoryList';
+import {GuildIcon} from '../../components/GuildIcon'
+
 
 //styles imports
 import {styles} from './styles'
 import { theme } from '../../global/styles/theme';
 
 //images imports
-import ImageBannerPng from "../../assets/banner.png"
+import ImageBannerPng from "../../assets/banner.png";
 
 export function ApointmentCreate(){
-    const members = [
-        {
-            id:"1",
-            username:"Fábio",
-            avatar_url:"https://github.com/fabioandrioli.png",
-            status:"online",
-        
-        },
-        {
-            id:"2",
-            username:"Carlos",
-            avatar_url:"https://github.com/fabioandrioli.png",
-            status:"online",
-        
-        },
-    ]
+    const [category,setCategory] = useState('');
     return(
         <Background>
             <Header 
-                title="Detalhes"
-                action={
-                    <BorderlessButton>
-                        <Fontisto
-                            name="share"
-                            size={24}
-                            color={theme.colors.primary}
+                title="Agendar partida"
+            />
+            <Text style={[
+                styles.label, 
+                {marginLeft:24, marginTop:36, marginBottom:18}]}>
+                Categoria
+            </Text>
+
+            <CategoryList 
+                hasCheckBox
+                setCategory={setCategory}
+                categorySelected={category}
+
+            />
+
+            <View style={styles.form}>
+                <RectButton>
+                    <View style={styles.select}>
+                       {
+                        // <View style={styles.image}/>
+                            <GuildIcon/>
+                       }
+                        <View style={styles.selectBody}>
+                            <Text style={styles.label}>
+                                Selecione um servidor
+                            </Text>
+                        </View>
+                        <Feather 
+                            name="chevron-right"
+                            color={theme.colors.heading}
+                            size={18}
                         />
-                    </BorderlessButton>
-                }
-            />
-            <ImageBackground
-                source={ImageBannerPng}
-                style={styles.banner}
-            >
-                <View style={styles.bannerContent}>
-                    <Text  style={styles.title}>
-                        Lendário
-                    </Text>
-                    <Text style={styles.subtitle}>
-                        É hoje que vamos chegar ao chellenger sem perder uma partida da M10
-                    </Text>
-                </View>
-            </ImageBackground>
-
-            <ListHeader
-                title="Jogadores"
-                subtitle="Total 3"
-            />
-
-            <FlatList
-                data={members}
-                keyExtractor={item => item.id}
-                renderItem={({item}) => (
-                    <Member data={item}/>
-                )}
-                ItemSeparatorComponent={() => <ListDivider/>}
-                style={styles.members}
-            />
-            <View style={styles.footer}>
-                <ButtonIcon title="Entrar na partida"/>
+                    </View>
+                </RectButton>
             </View>
+
         </Background>
     )
 }

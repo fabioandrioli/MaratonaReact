@@ -14,6 +14,7 @@ import {Apointment} from '../../components/Apointment'
 import {ListDivider} from '../../components/ListDivider'
 
 
+
 export function Home(){
     const [category,setCategory] = useState('');
     const navigation = useNavigation();
@@ -54,11 +55,15 @@ export function Home(){
         navigation.navigate("ApointmentDetails")
     }
 
+    function handleApointmentCreate(){
+        navigation.navigate("ApointmentCreate")
+    }
+
     return(
         <View>
             <View  style={styles.header}>
                 <Profile/>
-                <ButtonAdd/>
+                <ButtonAdd onPress={handleApointmentCreate}/>
             </View>
             <CategoryList 
                 categorySelected={category}
