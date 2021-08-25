@@ -21,6 +21,12 @@ export function Guilds({ handleGuildSelect }){
       name:"Lendários",
       icon:"Teste.png",
       owner:true,
+    },
+    {
+      id:"2",
+      name:"Picaretas",
+      icon:"Teste.png",
+      owner:false,
     }
   ]
 
