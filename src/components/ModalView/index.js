@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react';
 import {
   View,
   Modal,
-  ModalProps,
   TouchableWithoutFeedback,
 } from 'react-native';
 
@@ -13,7 +12,7 @@ import { Background } from '../Background';
 
 
 export function ModalView({
-  children, 
+  children = ReactNode, 
   closeModal,
   ...rest
 }){
