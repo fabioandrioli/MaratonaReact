@@ -44,8 +44,61 @@ export function Home(){
             date:"22/06 às 20:40",
             description:"E hoje vamos chegar ao chellenger sem perder uma partida da M10",
         
+        },
+        {
+            id:"3",
+            guild:{
+                id:"1",
+                name:"Lendários",
+                icon:null,
+                owner:true,
+            },
+            category:"1",
+            date:"22/06 às 20:40",
+            description:"E hoje vamos chegar ao chellenger sem perder uma partida da M10",
+        
+        },
+        {
+            id:"4",
+            guild:{
+                id:"1",
+                name:"Lendários",
+                icon:null,
+                owner:true,
+            },
+            category:"1",
+            date:"22/06 às 20:40",
+            description:"E hoje vamos chegar ao chellenger sem perder uma partida da M10",
+        
+        },
+        {
+            id:"5",
+            guild:{
+                id:"1",
+                name:"Lendários",
+                icon:null,
+                owner:true,
+            },
+            category:"1",
+            date:"22/06 às 20:40",
+            description:"E hoje vamos chegar ao chellenger sem perder uma partida da M10",
+        
+        },
+        {
+            id:"6",
+            guild:{
+                id:"1",
+                name:"Lendários",
+                icon:null,
+                owner:true,
+            },
+            category:"1",
+            date:"22/06 às 20:40",
+            description:"E hoje vamos chegar ao chellenger sem perder uma partida da M10",
+        
         }
     ]
+    
 
     function handleCategorySelected(categoryId){
         categoryId === category ? setCategory('') : setCategory(categoryId)
@@ -60,7 +113,7 @@ export function Home(){
     }
 
     return(
-        <View>
+        <View style={styles.container}>
             <View  style={styles.header}>
                 <Profile/>
                 <ButtonAdd onPress={handleApointmentCreate}/>
@@ -69,26 +122,28 @@ export function Home(){
                 categorySelected={category}
                 setCategory={handleCategorySelected}
             />
-            <View style={styles.content}>
-                <ListHeader
-                title="Partidas agendadas"
-                subtitle="Total 6"
-                />
+           
+            <ListHeader
+            title="Partidas agendadas"
+            subtitle="Total 6"
+            />
 
-                <FlatList
-                    data={appointments}
-                    keyExtractor={item => item.id}
-                    showsVerticalScrollIndicator={false}
-                    style={styles.matches}
-                    ItemSeparatorComponent={() => <ListDivider/>}
-                    renderItem={({item}) =>  (
-                        <Apointment 
-                            data={item}
-                            onPress={handleApointmentDetails}
-                        />
-                    )}
-                />
-            </View>
+            <FlatList
+                data={appointments}
+                keyExtractor={item => item.id}
+                showsVerticalScrollIndicator={true}
+                style={styles.matches}
+                contentContainerStyle={{paddingBottom:69}}
+                ItemSeparatorComponent={() => <ListDivider/>}
+                onEndReachedThreshold={0.5}
+                renderItem={({item}) =>  (
+                    <Apointment 
+                        data={item}
+                        onPress={handleApointmentDetails}
+                    />
+                )}
+            />
+         
         </View>
         
     )

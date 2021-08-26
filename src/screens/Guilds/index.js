@@ -27,7 +27,43 @@ export function Guilds({ handleGuildSelect }){
       name:"Picaretas",
       icon:"Teste.png",
       owner:false,
-    }
+    },
+    {
+      id:"3",
+      name:"Picaretas",
+      icon:"Teste.png",
+      owner:false,
+    },
+    {
+      id:"4",
+      name:"Picaretas",
+      icon:"Teste.png",
+      owner:false,
+    },
+    {
+      id:"5",
+      name:"Picaretas",
+      icon:"Teste.png",
+      owner:false,
+    },
+    {
+      id:"6",
+      name:"Picaretas",
+      icon:"Teste.png",
+      owner:false,
+    },
+    {
+      id:"7",
+      name:"Picaretas",
+      icon:"Teste.png",
+      owner:false,
+    },
+    {
+      id:"8",
+      name:"Picaretas",
+      icon:"Teste.png",
+      owner:false,
+    },
   ]
 
   async function fetchGuilds(){
