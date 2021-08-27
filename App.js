@@ -5,7 +5,7 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 import {Routes} from './src/routes/index';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
-
+import {AuthContextProvider} from './src/hooks/AuthHooks'
 
 export default function App() {
   //retorna um boleando dizendo se carregou ou não as fontes
@@ -27,7 +27,9 @@ export default function App() {
                 backgroundColor="transparent"
                 translucent
             />
-      <Routes/>
+        <AuthContextProvider>
+          <Routes/>
+        </AuthContextProvider>
     </>
   );
 }

@@ -11,8 +11,15 @@ import IlustrationImg from '../../assets/illustration.png'
 import {ButtonIcon} from '../../components/ButtonIcon/index'
 import {Background} from '../../components/Background'
 
+//hooks imports
+import {useAuth} from '../../hooks/AuthHooks'
+
 export function SignIn(){
     const navigation = useNavigation();
+
+    const {user} = useAuth();
+
+    console.log(user)
 
     function handleNavigationSiginIn() {
         navigation.navigate('Home')

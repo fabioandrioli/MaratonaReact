@@ -19,13 +19,11 @@ export function AuthRoutes() {
         <Stack.Navigator
             headerMode="none"
             screenOptions={ModalOptions}
-        >
+            >
+            <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="ApointmentDetails" component={ApointmentDetails} />
             <Stack.Screen name="ApointmentCreate" component={ApointmentCreate} />
-           
-           
-            <Stack.Screen name="SignIn" component={SignIn} />
             
         </Stack.Navigator>
     );
